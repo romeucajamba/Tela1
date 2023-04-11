@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tela de login</title>
+</head>
+<body>
+    <div class="Toda-div">
+       <div class="Faça-login"> 
+            <h4>Faça o login</h4>
+            <img src="lo-fi-concept-animate.svg" alt="acessadndo">
+        </div>
+        <div class="container">
+            <div class="buttonsForms">
+                <div class="btnColor"></div>
+                    <button id="btnSignin">Sign in</button>
+                    <button id="btnSignup">Sign up</button>
+            </div>
+            <form action="" id="signin">
+                <input type="text" placeholder="Email" required />
+                <ion-icon  class="Email" name="mail"></ion-icon>
+                <input type="password" placeholder="password" required />
+                <ion-icon class="iPassword" name="lock-closed"></ion-icon>
+                <div class="divcheck">
+                    <input type="checkbox" />
+                    <span>Remember password</span>
+                </div>
+                <button type="submit">sign in</button>
+            </form>
+
+            <form action="" id="signup">
+                <input type="text" placeholder="Email" required />
+                <ion-icon class="Email" name="mail"></ion-icon>
+                <input type="password" placeholder="password" required />
+                <ion-icon  class="iPassword" name="lock-closed"></ion-icon>
+                <input type="password" placeholder="password" required />
+                <ion-icon class="iPassword2" name="lock-closed"></ion-icon>
+                <div class="divcheck">
+                    <input type="checkbox" required/>
+                    <span>Terms</span>
+                </div>
+                <button type="submit">sign up</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const formulario1 = document.querySelector('#signin');
+        const formulario2 = document.querySelector('#signup');
+        const botaoColor = document.querySelector('.btnColor');
+
+        document.querySelector('#btnSignin').addEventListener('click', () => {
+            formulario1.style.left = "25px";
+            formulario2.style.left = "450px";
+            botaoColor.style.left = "0px";
+        });
+
+        document.querySelector('#btnSignup').addEventListener('click', () => {
+            formulario1.style.left = "-450px";
+            formulario2.style.left = "25px";
+            botaoColor.style.left = "110px";
+        });
+
+        console.log(formulario1, formulario2, botaoColor, btnSignin, btnSignup);
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
